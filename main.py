@@ -69,3 +69,8 @@ for index, row in df.iterrows():
 
     print(f"- {description}")
     print()
+    #top student
+    top_student_idx = df['Average Marks'].idxmax()
+    top_student_name = df.loc[top_student_idx, 'name']
+    top_student_avg = round(df.loc[top_student_idx, 'Average Marks'], 2)
+print(f"TOP PERFORMING STUDENT: {top_student_name} with an Average of {top_student_avg}%")
